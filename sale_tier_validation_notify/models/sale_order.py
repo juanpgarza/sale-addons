@@ -20,6 +20,7 @@ class SaleOrder(models.Model):
             subtype='mail.mt_comment',
             notification_ids=notification_ids)
 
-    def _notify_requested_review_body(self):
+    @api.multi
+    def request_validation(self):
         self.user_requesting_review = self.env.user
-        super(SaleOrder,self)._notify_requested_review_body()
+        super(SaleOrder,self).request_validation()
