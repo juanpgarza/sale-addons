@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+  <record id="change_sale_type" model="exception.rule">
+    <field name="name">Cambió tipo de venta</field>
+    <field name="description">Se cambió el tipo de venta por defecto del cliente</field>
+    <field name="sequence">10</field>
+    <field name="model">sale.order</field>
+    <field name="code">if not object.check_sale_type():
+    failed = True</field>
+    <field name="active" eval="True"/>
+  </record>
+
+  <record id="discount_simple_product" model="exception.rule">
+    <field name="name">Descuentos - Producto Simple</field>
+    <field name="description">Descuentos - Producto Simple</field>
+    <field name="sequence">10</field>
+    <field name="model">sale.order</field>
+    <field name="code">if not object.check_discount_simple_product():
+    failed = True</field>
+    <field name="active" eval="True"/>
+  </record>
+
+  <record id="discount_pack_product" model="exception.rule">
+    <field name="name">Descuentos - Producto Pack</field>
+    <field name="description">Descuentos - Producto Pack</field>
+    <field name="sequence">10</field>
+    <field name="model">sale.order</field>
+    <field name="code">if not object.check_discount_pack_product():
+    failed = True</field>
+    <field name="active" eval="True"/>
+  </record>
+
+</odoo>
