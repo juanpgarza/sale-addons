@@ -9,9 +9,10 @@
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",
     "license": "AGPL-3",
-    "depends": ["sale_exception"],
+    "depends": ["sale_exception","sale_order_type"],
     "data": [
         'data/exception_rule_data.xml',
+        'views/sale_order_views.xml',
         ],
     "installable": True,
 }
