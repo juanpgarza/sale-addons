@@ -12,7 +12,7 @@ class SaleOrder(models.Model):
     def check_discount_simple_product(self):
         self.ensure_one()
         for line in self.order_line:
-            if line.discount > 4 and not line.pack_child_line_ids and not line.pack_parent_line_id:
+            if line.discount > 4 and not line.pack_child_line_ids and not line.pack_parent_line_id and line.qty_invoiced == 0:
                 return False           
         return True
 
@@ -21,7 +21,7 @@ class SaleOrder(models.Model):
     def check_discount_pack_product(self):
         self.ensure_one()
         for line in self.order_line:
-            if line.discount > 10 and line.pack_child_line_ids and line.pack_parent_line_id:
+            if line.discount > 10 and line.pack_child_line_ids and not line.pack_parent_line_id and line.qty_invoiced == 0:
                 return False
         return True
 
@@ -35,7 +35,7 @@ class SaleOrder(models.Model):
                 descuento_predefinido = line.pack_parent_line_id.product_id.pack_line_ids.filtered(lambda x: x.product_id.id == line.product_id.id).sale_discount 
                 descuento_modificado = line.discount
 
-                if descuento_modificado > descuento_predefinido:                
+                if descuento_modificado > descuento_predefinido and line.qty_invoiced == 0:                
                     return False
         return True
 
@@ -64,7 +64,7 @@ class SaleOrder(models.Model):
 
                 precio_unitario = round(line.price_unit,2)
 
-                if precio_unitario != precio_unitario_actual:                
+                if precio_unitario != precio_unitario_actual and line.qty_invoiced == 0:                
                     return False
 
         return True
@@ -85,7 +85,9 @@ class SaleOrder(models.Model):
     @api.multi
     def check_cost_price(self):
         self.ensure_one()
-        if any(self.order_line.filtered(lambda x: x.purchase_price > x.price_unit and not x.pack_parent_line_id and x.product_id.type!='service')):
+        if any(self.order_line.filtered(lambda x: x.purchase_price > x.price_unit 
+                                        and not x.pack_parent_line_id and x.product_id.type!='service'
+                                        and x.qty_invoiced == 0)):
             return False
         return True
 
