@@ -4,11 +4,11 @@
 {
     "name": "sale_tier_validation_ux",
     "summary": "",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",
-    "depends": ["sale","sale_tier_validation"],
+    "depends": ["sale","sale_tier_validation","base_tier_validation"],
     "data": [
         'views/sale_order_views.xml',        
         ],
