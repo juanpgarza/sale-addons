@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="sale_product_multi_add.view_import_product_to_sale"/>
         <field name="arch" type="xml">
             <field name="products" position="attributes">
-                <attribute name="context">{'search_default_filter_to_sell':1}</attribute>
+                <attribute name="domain">[('sale_ok', '=', True)]</attribute>                
             </field>
         </field>
     </record>
