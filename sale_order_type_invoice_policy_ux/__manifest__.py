@@ -4,9 +4,10 @@
 {
     "name": "sale_order_type_invoice_policy_ux",
     "summary": "Que no tenga en cuenta para el bloqueo las facturas canceladas",
-    "version": "12.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
+    'license': 'AGPL-3',    
     "author": "juanpgarza",
     "depends": ["sale_order_type_invoice_policy"],
     "data": [
