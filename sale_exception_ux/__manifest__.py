@@ -4,7 +4,7 @@
 {
     "name": "sale_exception_ux",
     "summary": "",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",

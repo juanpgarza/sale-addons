@@ -64,4 +64,15 @@
     <field name="active" eval="True"/>
   </record>
 
+    <!-- 9 -->  
+    <record id="sale_ok" model="exception.rule">
+      <field name="name">Producto NO puede ser vendido</field>
+      <field name="description">El presupuesto contiene producto/s que no están marcados como "Puede ser vendido"</field>
+      <field name="sequence">19</field>
+      <field name="model">sale.order</field>
+      <field name="code">if not object.check_sale_ok():
+      failed = True</field>
+      <field name="active" eval="True"/>
+    </record>
+
 </odoo>
