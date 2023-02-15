@@ -91,6 +91,14 @@ class SaleOrder(models.Model):
             return False
         return True
 
+    # 9 - Producto que no está marcado como vendible
+    # 
+    @api.multi
+    def check_sale_ok(self):
+        self.ensure_one()
+        if any(self.order_line.filtered(lambda x: not x.product_id.sale_ok)):
+            return False
+        return True
 
 class SaleOrder(models.Model):
     _inherit = ['sale.order', 'base.exception']
