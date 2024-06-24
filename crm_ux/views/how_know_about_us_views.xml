@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="how_know_about_us_tree_view" model="ir.ui.view">
+        <field name="name">Como nos conoció</field>
+        <field name="model">how.know.about.us</field>
+        <field name="arch" type="xml">
+            <tree string="Como nos conoció" >
+                <field name="name" />
+            </tree>
+	    </field>
+	</record>
+
+    <record id="action_how_know_about_us" model="ir.actions.act_window">
+        <field name="name">Como nos conoció</field>
+        <field name="res_model">how.know.about.us</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_how_know_about_us" id="menu_how_know_about_us" 
+    parent="crm.crm_menu_config" name="Como nos conoció" sequence="3" />
+
+ 	<!-- account.account_management_menu  -->
+
+</odoo>
