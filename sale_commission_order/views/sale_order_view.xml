@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
 
             <field name="order_line" position="before">
-                <button name="%(action_sale_agent_wizard_form)d" string="Informar agente" type="action" attrs="{'invisible':[('state','not in',['draft','sent'])]}"/>
+                <button name="%(action_sale_agent_wizard_form)d" string="Informar agente" type="action" invisible="state !='draft' and state != 'sent'" />
             </field>
 
         </field>
