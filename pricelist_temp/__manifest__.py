@@ -16,5 +16,5 @@
         'views/pricelist_temp_views.xml',
         'security/ir.model.access.csv',
         ],
-    "installable": True,
+    "installable": False,
 }
