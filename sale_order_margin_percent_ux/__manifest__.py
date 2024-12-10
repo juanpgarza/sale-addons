@@ -11,6 +11,7 @@
     "author": "juanpgarza",
     "depends": [
         "sale_margin",
+        "pronto",
         ],
     "data": [
         ],
