@@ -4,7 +4,7 @@
 {
     "name": "sale_order_quote_ux",
     "summary": "",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",
@@ -16,5 +16,5 @@
         'views/sale_portal_templates.xml',
         'security/sale_order_quote_security.xml',
         ],
-    "installable": False,
+    "installable": True,
 }
