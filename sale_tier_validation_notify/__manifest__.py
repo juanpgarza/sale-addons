@@ -4,7 +4,7 @@
 {
     "name": "sale_tier_validation_notify",
     "summary": "",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Social",
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",
@@ -15,5 +15,5 @@
         ],
     "data": [
         ],
-    "installable": False,
+    "installable": True,
 }
