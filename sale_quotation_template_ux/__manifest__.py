@@ -4,7 +4,7 @@
 {
     "name": "sale_quotation_template_ux",
     "summary": "",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",
@@ -16,5 +16,5 @@
     "data": [
         'views/sale_portal_templates.xml',
         ],
-    "installable": False,
+    "installable": True,
 }
