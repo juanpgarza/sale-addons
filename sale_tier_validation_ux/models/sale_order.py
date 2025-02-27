@@ -22,6 +22,9 @@ class SaleOrder(models.Model):
         # estos campos no los va a tener en cuenta para la validación
         res.append('review_done_by_users')
         res.append('definicion_nivel')
+        res.append('applied_coupon_ids')
+        res.append('coupon_point_ids')        
+        res.append('delivery_status')
         return res
 
     def restart_validation(self):
