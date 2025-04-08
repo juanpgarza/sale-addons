@@ -9,7 +9,7 @@
             <xpath expr="//group[@name='sale_shipping']/div[1]" position="after">                
                 <label for="volume" string="Volumen total"/>
                 <div class="o_row" name="volume">
-                    <field name="volume" string="Volume"/>
+                    <field name="volume" readonly='True' string="Volume"/>
                     <span>m³</span>
                 </div>
             </xpath>
