@@ -19,29 +19,25 @@
                         <field name="src_product_id"/>
 
                         <field name="dest_product_ids">                         
-                            <tree string="Destino" editable="bottom">
+                            <list editable="bottom">
                                 <field name="dest_product_id" />                               
-                            </tree>
+                            </list>
                         </field>
                        
                     </group>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers" />
-                    <field name="activity_ids" widget="mail_activity"/>                    
-                    <field name="message_ids" widget="mail_thread" />
-                </div>
+                <chatter/>
             </form>
         </field>
     </record>
 
     <record id="view_sale_order_mpe_product_src_tree" model="ir.ui.view">
-        <field name="name">sale.order.mpe.product.src.tree.view</field>
+        <field name="name">sale.order.mpe.product.src.list.view</field>
         <field name="model">sale.order.mpe.product.src</field>
         <field name="arch" type="xml">
-            <tree create="true" delete="true" edit="false">
+            <list create="true" delete="true" edit="false">
                 <field name="src_product_id"/>
-            </tree>
+            </list>
         </field>
     </record>
    

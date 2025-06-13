@@ -23,12 +23,12 @@
                         <field name="quantity"/>
 
                         <field name="mass_product_exchange_line_ids">
-                            <tree string="Pedidos">
+                            <list>
                                 <field name="sale_order_id" />
                                 <field name="sale_order_partner_id" />                                
                                 <field name="sale_order_state" />
                                 <field name="sale_order_invoice_status" />                                
-                            </tree>
+                            </list>
                         </field>
                        
                     </group>
@@ -42,25 +42,21 @@
                         type="object"/> 
                     </group>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers" />
-                    <field name="activity_ids" widget="mail_activity"/>                    
-                    <field name="message_ids" widget="mail_thread" />
-                </div>
+                <chatter/>
             </form>
         </field>
     </record>
 
     <record id="view_sale_order_mass_product_exchange_tree" model="ir.ui.view">
-        <field name="name">sale.order.mass.product.exchange.tree.view</field>
+        <field name="name">sale.order.mass.product.exchange.list.view</field>
         <field name="model">sale.order.mass.product.exchange</field>
         <field name="arch" type="xml">
-            <tree create="false" delete="false" edit="false">
+            <list create="false" delete="false" edit="false">
                 <field name="date"/>
                 <field name="user_id"/>
                 <field name="rem_product_id"/>
                 <field name="add_product_id"/>
-            </tree>
+            </list>
         </field>
     </record>
 

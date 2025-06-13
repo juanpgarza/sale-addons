@@ -4,7 +4,7 @@
 {
     "name": "sale_order_mass_product_exchange",
     "summary": "",    
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",
@@ -21,5 +21,5 @@
         "wizards/sale_order_mass_action_view.xml",
         "views/menu_views.xml",        
     ],
-    "installable": False,
+    "installable": True,
 }
