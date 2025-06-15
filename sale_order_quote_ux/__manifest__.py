@@ -4,7 +4,7 @@
 {
     "name": "sale_order_quote_ux",
     "summary": "",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
     "author": "juanpgarza",
