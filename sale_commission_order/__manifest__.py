@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "sale_commission_order",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "author": "ITSur",
     "website": "",
 
@@ -15,7 +15,7 @@
     "development_status": "Production/Stable",
     "maintainers": ["juanpgarza"],
     "depends": [
-                'sale_commission',
+                'sale_commission_oca',
             ],
     
     "data": [
@@ -24,5 +24,5 @@
         'views/sale_order_view.xml',
         # 'views/templates.xml',        
     ],
-    'installable': False,
+    'installable': True,
 }
