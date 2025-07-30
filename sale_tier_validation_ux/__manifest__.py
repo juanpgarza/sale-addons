@@ -4,7 +4,7 @@
 {
     "name": "sale_tier_validation_ux",
     "summary": "",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/juanpgarza/sale-addons",
     'license': 'AGPL-3',
@@ -17,5 +17,5 @@
     "data": [
         'views/sale_order_views.xml',
         ],
-    "installable": False,
+    "installable": True,
 }
