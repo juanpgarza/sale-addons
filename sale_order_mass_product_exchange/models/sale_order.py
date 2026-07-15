@@ -6,6 +6,8 @@ from odoo.exceptions import UserError
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
+    es_un_cambio = fields.Boolean("Es un cambio", default=False)
+
     def product_exchange(self, mass_product_exchange_id, rem_product_id, add_product_id, quantity):
 
         mass_product_exchange_line_id = self.env["sale.order.mass.product.exchange.line"]

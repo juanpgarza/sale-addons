@@ -52,6 +52,9 @@ class SaleOrderMassActionWizard(models.TransientModel):
             if not sale_orders:
                 raise UserError("No seleccionó ningún pedido de venta. FUNCION no habilitada para presupuestos")
             sale_orders.sudo().product_exchange(new_mpe,wizard.rem_product_id, wizard.add_product_id,wizard.quantity)
+
+            sale_orders.write({'es_un_cambio': True})
+            # import pdb; pdb.set_trace()
             # sale_orders.action_confirm()
             # self._notify_success(sale_orders)
         return True
